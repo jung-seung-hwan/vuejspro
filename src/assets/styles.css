@@ -1,0 +1,77 @@
+/* Global CSS */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button.delete-button {
+    background-color: #dc3545;
+  }
+  
+  button.delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Input styles */
+  input {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .done {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+
+  .summary {
+    text-align: center;
+  }
+  
+  .summary strong {
+    color: #007BFF;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
