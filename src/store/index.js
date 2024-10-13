@@ -22,6 +22,9 @@ export default createStore({
     },
     toggleTodoStatus(state, index) {
       state.todos[index].done = !state.todos[index].done;
+    },
+    clearAllTodos(state) {
+      state.todos = [];  // 전체 삭제: todos 배열을 비웁니다.
     }
   },
   actions: {
@@ -33,9 +36,18 @@ export default createStore({
     },
     toggleTodoStatus({ commit }, index) {
       commit('toggleTodoStatus', index);
+    },
+    clearAllTodos({ commit }) {
+      commit('clearAllTodos');  // 전체 삭제 액션
     }
   },
   getters: {
-    todos: (state) => state.todos
+    todos: (state) => state.todos,
+    completedTodosCount: (state) => {
+      return state.todos.filter(todo => todo.done).length;  // 완료된 일 수
+    },
+    activeTodosCount: (state) => {
+      return state.todos.filter(todo => !todo.done).length;  // 완료되지 않은 일 수
+    }
   }
 });
